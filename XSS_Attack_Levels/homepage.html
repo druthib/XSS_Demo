@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable Web Application</title>
+    <!-- Link the CSS files -->
+    <link rel="stylesheet" href="Resources/button.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+      <source src="xss_vid.mp4" type="video/mp4">
+    </video>
+<div class="center-container">
+    <!-- Top Header Section -->
+    <div class="header-container">
+      <p class="header-text">Vulnerable Web Application</p>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="button-container">
+      <button class="button" type="button" name="_button" onclick="location.href='XSS/xssmainpage.html';">XSS</button>
+    </div>
+  </div>
+  </body>
+</html>

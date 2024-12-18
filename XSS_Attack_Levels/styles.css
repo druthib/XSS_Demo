@@ -1,0 +1,99 @@
+/* Define the CSS Variables for the New Colors */
+:root {
+    --color-black: #000000;  /* Black */
+    --color-dark-gray: #323232;  /* Dark Gray */
+    --color-bright-red: #ff4b4b;  /* Bright Red */
+    --color-white: #ffffff;  /* White */
+    --color-deep-blue: #323296;  /* Deep Blue */
+    --color-light-gray: #dcdcdc; /* Light gray */
+}
+
+/* Basic CSS styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #000000, #323296, #ff4b4b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: var(--color-white);
+}
+
+/* Video (Background Animation) */
+#bg-video {
+    position: fixed;  /* Keep video in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fullscreen video */
+    z-index: -1; /* Keep it behind the main content */
+}
+
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    width: 50%; /* Limit the container width */
+    max-width: 600px; /* Optional: set a max-width */
+    background-color: #afafaf; /* Match header background */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+/* Header Section */
+.header-container {
+    background-color: #afafaf;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    font-family: 'Georgia';
+    font-size: 250%;
+    text-align: center;
+}
+
+/* Button Section */
+.button-container {
+    background-color: #c9c9c9;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-deep-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color-bright-red);
+}
+
+/* Reflected Input Section Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
