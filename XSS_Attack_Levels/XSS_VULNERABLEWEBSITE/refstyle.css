@@ -1,0 +1,116 @@
+/* Define the CSS Variables for the New Colors */
+:root {
+    --color-black: #000000;  /* Black */
+    --color-dark-gray: #323232;  /* Dark Gray */
+    --color-bright-red: #ff4b4b;  /* Bright Red */
+    --color-white: #ffffff;  /* White */
+    --color-deep-blue: #323296;  /* Deep Blue */
+    --color-light-gray: #dcdcdc; /* Light gray */
+}
+
+/* Basic CSS styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #000000, #323296, #ff4b4b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: var(--color-white);
+}
+#bg-video {
+    position: fixed;  /* Make it stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen */
+    z-index: -1; /* Place the video behind the content */
+}
+
+/* Container and Main Content */
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 50px;
+    z-index: 1;
+    color:  var(--color-white);;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 5px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 28px;
+    color: var(--color-white);
+    border-bottom: 2px solid var(--color-dark-gray);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    color: var(--color-light-gray);
+    margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 5px;
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-deep-blue);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-deep-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-bright-red);
+}
+
+/* Reflected Input Styling */
+.reflected-output {
+    padding: 10px;
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    border-radius: 5px;
+    margin-top: 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+/* Keyframe Animation for Gradient Background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

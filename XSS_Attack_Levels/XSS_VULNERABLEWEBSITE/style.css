@@ -1,0 +1,115 @@
+/* Define the CSS Variables for the New Colors */
+:root {
+    --color-black: #000000;  /* #000000 = Black */
+    --color-dark-gray: #323232;  /* #323232 = Dark Gray */
+    --color-bright-red: #ff4b4b;  /* #ff4b4b = Bright Red */
+    --color-white: #ffffff;  /* #ffffff = White */
+    --color-deep-blue: #323296;  /* #323296 = Deep Blue */
+    --color-light-gray: #dcdcdc; /* Light gray for better contrast on headings */
+}
+
+/* Basic CSS styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-dark-gray); /* Dark gray background */
+    color: var(--color-white); /* White text for contrast */
+}
+#bg-video {
+    position: fixed;  /* Make it stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen */
+    z-index: -1; /* Place the video behind the content */
+}
+/* Container and Main Content */
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 50px;
+    z-index:1;
+    color: var(--color-white);
+    border: 1px solid var(--color-dark-gray); /* Dark gray border */
+    border-radius: 5px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 28px; /* Larger font size for better readability */
+    color: var(--color-white); /* White color for main heading */
+    border-bottom: 2px solid var(--color-dark-gray); /* Dark gray border for separation */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px; /* Slightly larger for section headings */
+    color: var(--color-light-gray); /* Light gray for sub-headings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Grid Layout for 2x2 Content */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 20px; /* spacing between items */
+}
+
+.grid-item {
+    padding: 15px;
+    background-color: var(--color-dark-gray); /* Dark gray background for grid items */
+    border: 1px solid var(--color-deep-blue); /* Deep blue border for grid items */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-white); /* White text color for links */
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: var(--color-deep-blue); /* Deep blue background for links */
+    border: 1px solid var(--color-deep-blue);
+}
+
+a:hover {
+    background-color: var(--color-bright-red); /* Bright red background on hover */
+    opacity: 0.9;
+}
+
+/* Button-like Link Styling */
+.perform-btn {
+    background-color: var(--color-deep-blue); /* Deep blue for perform buttons */
+    border: 1px solid var(--color-deep-blue);
+}
+
+.mitigate-btn {
+    background-color: var(--color-dark-gray); /* Dark gray for mitigate buttons */
+    border: 1px solid var(--color-dark-gray);
+}
+
+.view-keys-btn {
+    background-color: var(--color-bright-red); /* Bright red for view keys button */
+    border: 1px solid var(--color-bright-red);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--color-dark-gray); /* Dark gray footer background */
+    border-top: 2px solid var(--color-deep-blue); /* Deep blue border for footer */
+    font-size: 12px;
+    color: var(--color-white); /* White text for footer */
+}
